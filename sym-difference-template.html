@@ -1,0 +1,24 @@
+<div id='container' style="width: 100%; height: 100%">
+{{ Container }}
+</div>
+<div>
+<style type='text/css'>
+	#diffTable {
+		font-family:Verdana;
+		font-size:11px;border: 1px solid #1C6EA4;
+	}
+	#diffTable td {
+		border: 1px solid #1C6EA4;
+	}
+</style>
+<table id='diffTable'>
+<tr style="font-weight: bold;text-align:center;">
+	<td>Time<td>{{ Label1 }} <td>{{ Label2 }} <td>Difference
+</tr>
+
+<tr ng-repeat='item in dataByTime' >
+		<td>{{ item.time }}<td>{{ item.firstValue }}<td>{{ item.secondValue }}<td>{{ item.difference }}
+</tr>
+
+</table>
+</div>
